@@ -1,0 +1,71 @@
+Panels:
+- Class: rviz_common/Displays
+  Name: Displays
+Visualization Manager:
+  Class: ''
+  Global Options:
+    Fixed Frame: world
+    Background Color: 30; 34; 42
+  Displays:
+  - Class: rviz_default_plugins/Grid
+    Name: Ground (1m squares)
+    Enabled: true
+    Cell Size: 1
+    Plane Cell Count: 10
+  - Class: rviz_default_plugins/Axes
+    Name: Origin XYZ
+    Enabled: true
+    Length: 0.5
+    Radius: 0.02
+  - Class: rviz_default_plugins/Path
+    Name: Measured path (cyan)
+    Enabled: true
+    Topic:
+      Value: /cf1/path
+      Depth: 10
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+    Color: 30; 220; 190
+    Line Style: Billboards
+    Line Width: 0.025
+  - Class: rviz_default_plugins/Pose
+    Name: Simulated drone position
+    Enabled: true
+    Topic:
+      Value: /cf1/pose
+      Depth: 10
+    Shape: Axes
+    Axes Length: 0.2
+    Axes Radius: 0.025
+  - Class: rviz_default_plugins/Path
+    Name: Planned path (orange)
+    Enabled: true
+    Topic:
+      Value: /cf1/planned_path
+      Depth: 1
+      Reliability Policy: Reliable
+      Durability Policy: Transient Local
+    Color: 240; 150; 40
+    Line Style: Billboards
+    Line Width: 0.015
+  - Class: rviz_default_plugins/Marker
+    Name: Stage and measured position
+    Enabled: true
+    Topic:
+      Value: /cf1/status_label
+      Depth: 10
+      Reliability Policy: Reliable
+      Durability Policy: Volatile
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 4.7
+      Pitch: 0.4
+      Yaw: 0.8
+      Focal Point:
+        X: 0
+        Y: 0.5
+        Z: 0.5
+Window Geometry:
+  Width: 1100
+  Height: 780

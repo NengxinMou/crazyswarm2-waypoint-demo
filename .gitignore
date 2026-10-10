@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+install/
+log/
+.venv/
+.vscode/
+results/
+*.mp4
+*.webm
+
+# Keep one small, verified demo clip in the shared repository.
+!docs/media/waypoint_demo.mp4

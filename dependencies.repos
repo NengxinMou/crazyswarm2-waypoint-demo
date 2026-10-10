@@ -1,0 +1,13 @@
+repositories:
+  ros2_ws/src/crazyswarm2:
+    type: git
+    url: https://github.com/IMRCLab/crazyswarm2.git
+    version: f1e09954f56cd08e7d9aff5e13dc9a68795914a3
+  ros2_ws/src/ros_gz_crazyflie:
+    type: git
+    url: https://github.com/knmcguire/ros_gz_crazyflie.git
+    version: e2792d0727a22aba3cd8e67f018d95c95f76c487
+  simulation_ws/crazyflie-simulation:
+    type: git
+    url: https://github.com/bitcraze/crazyflie-simulation.git
+    version: 7e93752dbc803af2488c1db46bb79b3da55f5d8c

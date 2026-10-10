@@ -1,0 +1,8 @@
+# Position units: metres, in the world frame. End at ground level.
+waypoints:
+  - name: TAKEOFF
+    position: [0.0, 0.0, 1.0]
+  - name: FLY_Y
+    position: [0.0, 1.0, 1.0]
+  - name: LAND
+    position: [0.0, 1.0, 0.0]

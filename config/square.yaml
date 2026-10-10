@@ -1,0 +1,14 @@
+# A small additional waypoint experiment, inside the demo world.
+waypoints:
+  - name: TAKEOFF
+    position: [0.0, 0.0, 1.0]
+  - name: SIDE_1
+    position: [0.5, 0.0, 1.0]
+  - name: SIDE_2
+    position: [0.5, 0.5, 1.0]
+  - name: SIDE_3
+    position: [0.0, 0.5, 1.0]
+  - name: RETURN
+    position: [0.0, 0.0, 1.0]
+  - name: LAND
+    position: [0.0, 0.0, 0.0]

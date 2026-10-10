@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>capstone_demo</name>
+  <version>0.2.0</version>
+  <description>Simple waypoint flight with a P position controller in Gazebo.</description>
+  <maintainer email="170855932+NengxinMou@users.noreply.github.com">Nengxin</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>crazyflie_interfaces</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_crazyflie_gazebo</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
