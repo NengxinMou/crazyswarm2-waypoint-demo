@@ -62,5 +62,5 @@ the last point should have z = 0 for landing.
 ## Notes
 
 The takeoff–move–land sequence and the square example have been tested in
-simulation. The video shows the flight path in RViz while Gazebo runs in the
-background. Next I want to try more waypoints and learn about PID control.
+simulation. The video shows Gazebo on the left and RViz on the right, recorded together
+during the same flight. Next I want to try more waypoints and learn about PID control.
