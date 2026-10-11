@@ -44,5 +44,3 @@ is also included in `config/square.yaml`.
 
 The takeoff–move–land sequence and the square example have been tested in
 simulation. Next I want to try more waypoints and learn about PID control.
-
-[Code notes](docs/walkthrough.md) · [Test results](docs/results.md) · [Recording instructions](docs/recording.md)
