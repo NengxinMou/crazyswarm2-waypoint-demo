@@ -34,7 +34,7 @@ Install ROS Humble Desktop and Gazebo Harmonic first, then these dependencies
 sudo apt install python3-colcon-common-extensions python3-vcstool \
   libboost-program-options-dev libusb-1.0-0-dev libeigen3-dev \
   ros-humble-motion-capture-tracking ros-humble-tf-transformations \
-  ros-humble-ros-gzharmonic python3-yaml python3-matplotlib
+  ros-humble-ros-gzharmonic python3-yaml
 ```
 
 To build in a new directory:
@@ -59,8 +59,4 @@ Edit `config/assignment.yaml` to change the waypoints. A small square example
 is also included in `config/square.yaml`. Positions are `[x, y, z]` in metres;
 the last point should have z = 0 for landing.
 
-## Notes
-
-The takeoff–move–land sequence and the square example have been tested in
-simulation. The video shows Gazebo on the left and RViz on the right, recorded together
-during the same flight. Next I want to try more waypoints and learn about PID control.
+The video shows Gazebo on the left and RViz on the right during the same flight.
