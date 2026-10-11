@@ -27,20 +27,40 @@ velocity fields to drive Gazebo's built-in velocity controller; it does not run
 ## Run
 
 Tested with Ubuntu 22.04, ROS 2 Humble and Gazebo Harmonic.
-See [setup instructions](docs/setup.md#build-and-run) for dependencies and building.
-
-From the ROS workspace (`ros2_ws`):
+Install ROS Humble Desktop and Gazebo Harmonic first, then these dependencies
+(use the Harmonic ROS bridge):
 
 ```bash
+sudo apt install python3-colcon-common-extensions python3-vcstool \
+  libboost-program-options-dev libusb-1.0-0-dev libeigen3-dev \
+  ros-humble-motion-capture-tracking ros-humble-tf-transformations \
+  ros-humble-ros-gzharmonic python3-yaml python3-matplotlib
+```
+
+To build in a new directory:
+
+```bash
+mkdir -p crazyflie_demo/ros2_ws/src
+cd crazyflie_demo
+git clone https://github.com/NengxinMou/crazyswarm2-waypoint-demo.git ros2_ws/src/capstone_demo
+vcs import --recursive . < ros2_ws/src/capstone_demo/dependencies.repos
+cd ros2_ws
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install --packages-up-to capstone_demo \
+  --cmake-args -DBUILD_TESTING=OFF
 bash src/capstone_demo/scripts/run_demo.sh
 ```
+
+For later runs, use the last command from `ros2_ws`.
 
 RViz shows the target and actual paths. Press Ctrl+C to stop after landing.
 
 Edit `config/assignment.yaml` to change the waypoints. A small square example
-is also included in `config/square.yaml`.
+is also included in `config/square.yaml`. Positions are `[x, y, z]` in metres;
+the last point should have z = 0 for landing.
 
 ## Notes
 
 The takeoff–move–land sequence and the square example have been tested in
-simulation. Next I want to try more waypoints and learn about PID control.
+simulation. The video shows the flight path in RViz while Gazebo runs in the
+background. Next I want to try more waypoints and learn about PID control.
